@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Quadcopter Simulator</title>
+		<!-- <meta http-equiv="refresh" content="10" > -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<script src="/js/popper.js"></script>
+		<script src="/js/jquery.js"></script>
+		<script src="/js/bootstrap.js"></script>
+    <link href="/css/bootstrap.css" rel="stylesheet">
+	</head>
+	<body style="background-color: #000000; margin: 0px; overflow: hidden;" onmousemove="SetControls(event)" onmousedown="Reset(event)">
+		<div class="d-flex justify-content-between" style="position:absolute; width:100%; display:block;">
+			<div class="btn-group dropright p-2">
+				<button type="button" class="btn btn-secondary btn-lg dropdown-toggle" data-toggle="dropdown"
+					aria-haspopup="true" aria-expanded="false" style="padding:1ex; margin:1ex;">Change Style</button>
+				<div class="dropdown-menu" style="margin:1ex; padding:1ex;">
+					<a id="PRS" class="dropdown-item active" href="#" onclick="PRStyle(event)">Pitch-Roll</a>
+					<a id="PYS" class="dropdown-item" href="#" onclick="PYStyle(event)">Pitch-Yaw</a>
+					<a id="PTS" class="dropdown-item" href="#" onclick="PTStyle(event)">Pitch-Throttle</a>
+				</div>
+			</div>
+			<div class="btn-group p-2" style="margin:3%">
+				<p style="color:white;">Quadcopter Flight Simulator</p>
+			</div>
+			<div class="btn-group p-2" style="">
+				<button type="button" class="btn btn-secondary btn-lg dropdown-toggle" data-toggle="dropdown"
+					aria-haspopup="true" aria-expanded="false" style="padding:1ex; margin:1ex;">Mode</button>
+				<div class="dropdown-menu" style="margin:1ex; padding:1ex;">
+					<a id="AngleM" class="dropdown-item active" href="#" onclick="Angle(event)">Angle</a>
+					<a id="AcrobM" class="dropdown-item" href="#" onclick="Acro(event)">Acrobatics</a>
+				</div>
+			</div>
+		</div>
+		<div id="viewer"></div>
+		<script src="/js/three.js"></script>
+		<script src="/js/STLLoader.js"></script>
+		<script src="/js/Detector.js"></script>
+		<script src="/js/QuadDisplay.js"></script>
+	</body>
+</html>
